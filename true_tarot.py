@@ -439,6 +439,8 @@ class CommandLineGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("Tarot Reading Terminal")
+        # Set the window icon
+        root.iconbitmap(r"C:\Users\jjona\Desktop\Python_Code_Projects\true_tarot_reading\tarot_icon_177463.ico")
         self.root.geometry("1100x600")
         
         # Create the main text area
