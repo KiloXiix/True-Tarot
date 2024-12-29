@@ -444,7 +444,10 @@ class CommandLineGUI:
         self.root.geometry("1100x600")
         
         # Create the main text area
-        self.text_area = scrolledtext.ScrolledText(root, wrap=tk.WORD, bg='black', fg='magenta', font=('Arial', 14))
+        # Set the transparency level
+        root.attributes('-alpha', 0.9)  # Set transparency (1.0 is fully opaque, 0.0 is fully transparent)
+
+        self.text_area = scrolledtext.ScrolledText(root, wrap=tk.WORD, bg='#000000', fg='white', font=('Arial', 14))
         self.text_area.pack(expand=True, fill='both')
         
         # Create the input entry with increased width and font size
